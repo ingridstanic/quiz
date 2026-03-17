@@ -1,3 +1,5 @@
+import { startQuiz } from "./quizUtil";
+
 export const startModule = () => {
   const startContainer = document.getElementById("startContainer");
 
@@ -15,15 +17,13 @@ export const startModule = () => {
   text.innerHTML = "Test your knowledge, you must. Ready, are you?";
   startBtn.className = "start-btn";
   startBtn.innerHTML = "Begin, you will";
+  startBtn.addEventListener("click", () => {
+    startQuiz();
+    startContainer.innerHTML = "";
+  });
 
   module.appendChild(text);
   module.appendChild(startBtn);
 
   startContainer.appendChild(module);
-};
-
-export const startQuiz = () => {
-  const quizContainer = document.getElementById("quizContainer");
-
-  if (!quizContainer) return;
 };
