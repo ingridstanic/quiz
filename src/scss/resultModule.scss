@@ -29,4 +29,27 @@
   p {
     color: $text-color;
   }
+
+  .reset-btn {
+    font-family: $fontFamily;
+    font-weight: 500;
+    padding: 0 $padding-sm 0 $padding-sm;
+    background: rgba(10, 25, 45, 0.35);
+    border: 1px solid #00f0ff;
+    color: $text-color;
+    border-radius: 5px;
+    min-height: 35px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 0 8px rgba(0, 240, 255, 0.25);
+
+    &:hover {
+      background: rgba(0, 240, 255, 0.18);
+      box-shadow:
+        0 0 10px rgba(0, 240, 255, 0.35),
+        0 0 20px rgba(0, 240, 255, 0.2);
+      transform: translateY(-2px);
+    }
+  }
 }

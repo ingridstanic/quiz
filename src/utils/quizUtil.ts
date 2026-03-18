@@ -1,4 +1,5 @@
 import { questions } from "../Data/dataQuestions";
+import { startModule } from "./startUtil";
 
 let currentQuestionIndex = 0;
 let currentQuestion = questions[currentQuestionIndex];
@@ -56,7 +57,17 @@ export const showResult = () => {
   if (quizContainer) {
     quizContainer.innerHTML = "";
     const resultCard = document.createElement("div");
+    const resetBtn = document.createElement("button");
+
+    resetBtn.className = "reset-btn";
     resultCard.className = "result-card";
+    resetBtn.innerHTML = "quit";
+
+    resetBtn.addEventListener("click", () => {
+      quizContainer.innerHTML = "";
+      startModule();
+    });
+
     if (score <= 2) {
       resultCard.innerHTML = `
       <h1>Your total score: ${score}</h1>
@@ -83,6 +94,7 @@ export const showResult = () => {
       <h2>Grand Master of the Force</h2>
       <p>Matered the ways of Star Wars, you have.</p>`;
     }
+    resultCard.appendChild(resetBtn);
     quizContainer.appendChild(resultCard);
   }
 };
