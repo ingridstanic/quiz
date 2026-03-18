@@ -1,0 +1,62 @@
+@use "variables" as *;
+
+.quiz-card {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $margin-lg;
+  padding: $padding-md;
+  background: rgba(10, 25, 45, 0.35);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
+  border-radius: 5px;
+  animation: flicker 4s infinite;
+  animation: holoGlow 2.5s infinite ease-in-out;
+
+  h1 {
+    position: absolute;
+    top: $margin-sm;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1em;
+    color: $text-color;
+  }
+
+  p {
+    color: $text-color;
+  }
+
+  .optionsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $margin-sm;
+    width: 100%;
+    max-width: 300px;
+    button {
+      font-family: $fontFamily;
+      font-weight: 500;
+      padding: 0 $padding-sm 0 $padding-sm;
+      background: rgba(10, 25, 45, 0.35);
+      border: 1px solid #00f0ff;
+      color: $text-color;
+      border-radius: 5px;
+      min-height: 35px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 8px rgba(0, 240, 255, 0.25);
+
+      &:hover {
+        background: rgba(0, 240, 255, 0.18);
+        box-shadow:
+          0 0 10px rgba(0, 240, 255, 0.35),
+          0 0 20px rgba(0, 240, 255, 0.2);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}

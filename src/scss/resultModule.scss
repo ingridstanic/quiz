@@ -1,0 +1,32 @@
+@use "variables" as *;
+
+.result-card {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: $margin-lg;
+  padding: $padding-md;
+  background: rgba(10, 25, 45, 0.35);
+  border: 1px solid rgba(0, 240, 255, 0.35);
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
+  border-radius: 5px;
+  animation: flicker 4s infinite;
+  animation: holoGlow 2.5s infinite ease-in-out;
+
+  h1 {
+    position: absolute;
+    top: $margin-sm;
+    margin: 0;
+    font-weight: 600;
+    font-size: 1em;
+    color: $text-color;
+  }
+  h2,
+  p {
+    color: $text-color;
+  }
+}
