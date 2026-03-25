@@ -8,7 +8,7 @@ export const questions: Question[] = [
   ),
   new Question(
     "Who is Luke Skywalker's father?",
-    ["Han Solo", "Obi-Wan Kenobi", "Qui-Gon Jinn", "Dart Vader"],
+    ["Han Solo", "Obi-Wan Kenobi", "Qui-Gon Jinn", "Darth Vader"],
     3,
   ),
   new Question(
@@ -33,7 +33,7 @@ export const questions: Question[] = [
   ),
   new Question(
     "What is Princess Leia's lastname by birth?",
-    ["Skywalker", "Amidala", "Organa", "Kenobi"],
+    ["Naberrie", "Amidala Skywalker", "Organa", "Kenobi"],
     1,
   ),
   new Question(
